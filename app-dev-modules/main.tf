@@ -12,8 +12,8 @@ variable "subnet_address_prefixes" {
 }
 
 module "networking" {
-  source  = "app.terraform.io/cardinalsolutions/networking/azurerm"
-  version = "0.0.1"
+  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/networking/azurerm"
+  version = "0.0.2"
 
   name                    = "${var.name}"
   location                = "${var.location}"
@@ -22,8 +22,8 @@ module "networking" {
 }
 
 module "webserver" {
-  source  = "app.terraform.io/cardinalsolutions/webserver/azurerm"
-  version = "0.0.1"
+  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/webserver/azurerm"
+  version = "0.0.2"
 
   name      = "${var.name}"
   location  = "${var.location}"
@@ -34,7 +34,7 @@ module "webserver" {
 }
 
 module "appserver" {
-  source  = "app.terraform.io/cardinalsolutions/appserver/azurerm"
+  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/appserver/azurerm"
   version = "0.0.1"
 
   name      = "${var.name}"
@@ -46,7 +46,7 @@ module "appserver" {
 }
 
 module "dataserver" {
-  source  = "app.terraform.io/cardinalsolutions/dataserver/azurerm"
+  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/dataserver/azurerm"
   version = "0.0.1"
 
   name      = "${var.name}"
