@@ -12,7 +12,7 @@ variable "subnet_address_prefixes" {
 }
 
 module "networking" {
-  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/networking/azurerm"
+  source  = "aa-training.digitalinnovation.dev/ahameed/networking/azurerm"
   version = "0.0.2"
 
   name                    = "${var.name}"
@@ -22,7 +22,7 @@ module "networking" {
 }
 
 module "webserver" {
-  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/webserver/azurerm"
+  source  = "aa-training.digitalinnovation.dev/ahameed/webserver/azurerm"
   version = "0.0.2"
 
   name      = "${var.name}"
@@ -34,7 +34,7 @@ module "webserver" {
 }
 
 module "appserver" {
-  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/appserver/azurerm"
+  source  = "aa-training.digitalinnovation.dev/ahameed/appserver/azurerm"
   version = "0.0.1"
 
   name      = "${var.name}"
@@ -46,7 +46,7 @@ module "appserver" {
 }
 
 module "dataserver" {
-  source  = "aa-training.digitalinnovation.dev/app/ahameed/modules/view/dataserver/azurerm"
+  source  = "aa-training.digitalinnovation.dev/ahameed/dataserver/azurerm"
   version = "0.0.1"
 
   name      = "${var.name}"
